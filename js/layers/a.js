@@ -200,8 +200,8 @@ addLayer("a", {
     milestones: {
         0: {
             effectDescription: "Automate A-Power.",
-            unlocked() { return hasAchievement("goals", 52) },
-            done() { return hasAchievement("goals", 52) },
+            unlocked() { return hasAchievement("goals", 11) },
+            done() { return hasAchievement("goals", 11) },
             toggles: [["a", "auto"]]
         },
         1: {
