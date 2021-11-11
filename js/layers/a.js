@@ -29,10 +29,10 @@ addLayer("a", {
     },
     base() { 
         let base = new Decimal(1.5);
-        if (hasAchievement("goals", 22)) base = base.sub(.1);
-        if (hasAchievement("goals", 31)) base = base.sub(.1);
-        if (hasAchievement("goals", 41)) base = base.sub(.05);
-        if (hasAchievement("goals", 52)) base = base.sub(.05);
+        if (hasAchievement("goals", 22)) base = base.sub(1);
+        if (hasAchievement("goals", 31)) base = base.sub(1);
+        if (hasAchievement("goals", 41)) base = base.sub(5);
+        if (hasAchievement("goals", 52)) base = base.sub(5);
         return base;
     },
     canBuyMax() { return hasAchievement("goals", 21) },
@@ -179,7 +179,7 @@ addLayer("a", {
                 if (hasAchievement("goals", 34) && tmp.b.batteriesUnl) eff = eff.times(gridEffect("b", 103));
                 return eff;
             },
-            cost(x=player[this.layer].buyables[this.id]) { return Decimal.pow(1.5, x).times(5).plus(10).ceil() },
+            cost(x=player[this.layer].buyables[this.id]) { return Decimal.pow(1, x).times(1).plus(1).ceil() },
             target(r=player[this.layer].points) { return r.sub(10).div(5).max(1).log(1.5).plus(1).floor() },
             display() { return "Level: "+formatWhole(player[this.layer].buyables[this.id])+"<br>Cost: "+formatWhole(tmp[this.layer].buyables[this.id].cost)+" A-Power" },
             canAfford() { return player[this.layer].points.gte(layers[this.layer].buyables[this.id].cost()) },
