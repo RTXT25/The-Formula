@@ -50,11 +50,11 @@ addLayer("goals", {
                 },
                 {
                     desc: "Unlock B-Power",
-                    req: 7,
+                    req: 4,
                 },
                 {
                     desc: "Unlock Batteries",
-                    req: 12,
+                    req: 5,
                 },
                 {
                     desc: "Unlock C-Power",
