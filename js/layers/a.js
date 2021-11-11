@@ -184,7 +184,7 @@ addLayer("a", {
             display() { return "Level: "+formatWhole(player[this.layer].buyables[this.id])+"<br>Cost: "+formatWhole(tmp[this.layer].buyables[this.id].cost)+" A-Power" },
             canAfford() { return player[this.layer].points.gte(layers[this.layer].buyables[this.id].cost()) },
             buy() { 
-                if (hasAchievement("goals", 73)) {
+                if (hasAchievement("goals", 13)) {
                     layers[this.layer].buyables[this.id].buyMax();
                     return;
                 }
