@@ -246,7 +246,7 @@ addLayer("goals", {
         },
         52: {
             name: "Woah that's a lotta Damage!",
-            done() { return player.a.points.gte(2e3) },
+            done() { return player.a.points.gte(23) },
             tooltip: "Reach 2,000 A-Power. Reward: You can automatically gain A-Power, and decrease its requirement base by 0.05.",
             unlocked() { return hasAchievement("goals", 44) }
         },
@@ -324,13 +324,13 @@ addLayer("goals", {
         },
         73: {
             name: "The Useless Quality of Life",
-            done() { return tmp.a.bars.Avolve.reqDiv.gte(1e100) },
+            done() { return tmp.a.bars.Avolve.reqDiv.gte(1100) },
             tooltip: "Divide the Avolve requirement by 1e100. Reward: The Avolve requirement reduction upgrade can be automated and bought in bulk. Also, its effect exponent is increased by your IP.",
             unlocked() { return hasAchievement("goals", 65) && player.int.unlocked },
         },
         74: {
             name: "Intense Absolution",
-            done() { return player.int.points.gte(2) },
+            done() { return player.int.points.gte(1) },
             tooltip: "Reach 2 Integrations. Reward: You can buy max B-Power, and the B-Power requirement exponent increase is 20% weaker.",
             unlocked() { return hasAchievement("goals", 71) && player.int.unlocked },
         },
