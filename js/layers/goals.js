@@ -58,15 +58,15 @@ addLayer("goals", {
                 },
                 {
                     desc: "Unlock C-Power",
-                    req: 19,
+                    req: 6,
                 },
                 {
                     desc: "Unlock The Clock",
-                    req: 27,
+                    req: 7,
                 },
                 {
                     desc: "Unlock Integration",
-                    req: 37,
+                    req: 8,
                 },
             ],
             retrieveUnlockData() { return tmp[this.layer].buyables[11].unlockData[player[this.layer].buyables[11].toNumber()] },
